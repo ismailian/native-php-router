@@ -1,0 +1,15 @@
+# Begin
+<IfModule mod_rewrite.c>
+
+    # Engine
+    RewriteEngine on
+    RewriteBase /
+    Options -Indexes
+
+    # Conditions/Rules
+    RewriteCond %{REQUEST_METHOD} (.+)
+    RewriteRule ^web\.php$ - [L]
+    RewriteRule ^(.*)$ /web.php [NC,L,QSA]
+
+</IfModule>
+# End
