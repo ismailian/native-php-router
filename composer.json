@@ -14,5 +14,7 @@
             "email": "techcyber598@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }
