@@ -38,7 +38,7 @@ trait Url
         $params = $this->getParams($route);
 
         list($newRoute, $routeLength, $lastSlashPos) = [$route, strlen($route), strrpos($route, '/')];
-        $newRoute .= ($routeLength - 1 === $lastSlashPos) ? $newRoute .= '?' : '/?';
+        $newRoute .= ($routeLength - 1 === $lastSlashPos) ? '?' : '/?';
 
         $regex = @preg_replace(array_keys($params), array_values($params), $newRoute);
         $regex = @str_replace('/', '\/', $regex);
