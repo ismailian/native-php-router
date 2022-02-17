@@ -41,10 +41,10 @@ class Route
      */
     public function __construct(array $routeInfo, array $urlInfo)
     {
-        $this->method = $routeInfo['method'];
-        $this->route = $routeInfo['route'];
-        $this->url = $urlInfo['url'];
-        $this->params = (object)$urlInfo['params'];
+        $this->method  = $routeInfo['method'];
+        $this->route   = $routeInfo['route'];
+        $this->url     = $urlInfo['url'];
+        $this->params  = (object)$urlInfo['params'];
         $this->isMatch = $urlInfo['isMatch'] && ($_SERVER['REQUEST_METHOD'] === $this->method);
     }
 }

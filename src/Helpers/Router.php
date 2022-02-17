@@ -37,4 +37,15 @@ class Router
             $callback($route);
         }
     }
+
+    /**
+     * default destructor.
+     * it takes care of unhandled routes.
+     */
+    public function __destruct()
+    {
+        if (!$this->handled) {
+            die("Unhandled Route");
+        }
+    }
 }
