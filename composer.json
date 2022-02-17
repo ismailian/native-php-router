@@ -1,0 +1,18 @@
+{
+    "name": "ismailian/php-router",
+    "description": "This is a router package writtern in php for php",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FlexRouter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ismail Aatif",
+            "email": "techcyber598@gmail.com"
+        }
+    ],
+    "require": {}
+}
