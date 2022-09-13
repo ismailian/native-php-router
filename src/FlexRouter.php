@@ -7,7 +7,7 @@ use FlexRouter\Helpers\Router;
 
 /**
  * This is the FlexRouter main class.
- * it handle all routings with all method.
+ * it handles all routing with all method.
  */
 class FlexRouter extends Router
 {
@@ -15,11 +15,12 @@ class FlexRouter extends Router
     /**
      * the magic __call method.
      * it helps call http request methods as router class methods dynamically.
-     * 
+     *
      * @param string $name the method name.
      * @param mixed $arguments the args passed to the method
+     * @throws Exception
      */
-    public function __call($name, $arguments): void
+    public function __call(string $name, $arguments): void
     {
         if (!in_array(strtoupper($name), $this->allowedMethods)) {
             throw new Exception('Method Not Allowed');

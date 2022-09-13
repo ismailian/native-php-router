@@ -14,7 +14,7 @@ trait Url
      * @param string $route the route to check for parameters.
      * @return array returns an array containing all parameter names and their value pattern.
      */
-    public function getParams(string $route)
+    public function getParams(string $route): array
     {
         @preg_match_all('/\/(?<name>\:[^\s\/\-]+)\/?/', $route, $result);
 
@@ -32,7 +32,7 @@ trait Url
      * @param string $url the request url.
      * @param string $route the route.
      */
-    public function getInfo($url, $route)
+    public function getInfo(string $url, string $route): array
     {
         /** get params */
         $params = $this->getParams($route);

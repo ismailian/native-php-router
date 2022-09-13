@@ -1,6 +1,6 @@
 {
     "name": "ismailian/php-router",
-    "description": "This is a router package writtern in php for php",
+    "description": "This is a router package written in php for php",
     "type": "library",
     "license": "MIT",
     "autoload": {
